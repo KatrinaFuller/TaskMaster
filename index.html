@@ -12,13 +12,22 @@
 
 <body>
     <div class="container-fluid">
-        <form onsubmit="app.controllers.listController.addList(event)">
-            <div class="form-group">
-                <label for="title">Title of List</label>
-                <input type="text" class="form-control" id="title" placeholder="enter title of your list" required>
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-4 text-center">
+                <form onsubmit="app.controllers.listController.addList(event)">
+                    <div class="form-group">
+                        <label for="title">
+                            <h1>Title of List</h1>
+                        </label>
+                        <input type="text" class="form-control" id="title" placeholder="enter title of your list"
+                            required>
+                    </div>
+                    <button class="btn submit-button">Submit</button>
+                </form>
             </div>
-            <button class="btn btn-primary">Submit</button>
-        </form>
+        </div>
+        <br>
+        <div id="list" class="row"></div>
 
 
     </div>

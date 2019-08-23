@@ -4,7 +4,7 @@ import List from "../models/List.js";
 let _state = {
     lists: [new List({
         title: "To Do",
-        task: "get health insurance",
+        tasks: ["go to store", "get food"]
     })]
 }
 
@@ -28,7 +28,7 @@ export default class ValuesService {
     }
 
     addTask(newTask, listIndex) {
-        _state.lists[listIndex].task.push(newTask)
+        _state.lists[listIndex].tasks.push(newTask)
         this.saveLists()
     }
 
@@ -38,7 +38,7 @@ export default class ValuesService {
     }
 
     deleteTask(listIndex, taskIndex) {
-        _state.lists[listIndex].task.splice(taskIndex, 1)
+        _state.lists[listIndex].tasks.splice(taskIndex, 1)
         this.saveLists()
     }
 
