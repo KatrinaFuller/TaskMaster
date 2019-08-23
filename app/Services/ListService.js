@@ -5,9 +5,6 @@ let _state = {
     lists: [new List({
         title: "To Do",
         task: "get health insurance",
-        date: 082319,
-        dueDate: 090119,
-        priorityLevel: "high"
     })]
 }
 
