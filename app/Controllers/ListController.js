@@ -14,6 +14,9 @@ function _drawLists() {
     document.querySelector('#list').innerHTML = template
 }
 
+function _confirmDelete() {
+    confirm("Are you sure you want to delete this?")
+}
 
 //Public
 export default class ListController {
@@ -47,10 +50,12 @@ export default class ListController {
     deleteList(index) {
         _listService.deleteList(index)
         _drawLists()
+        _confirmDelete()
     }
 
     deleteTask(listIndex, taskIndex) {
         _listService.deleteTask(listIndex, taskIndex)
         _drawLists()
+        _confirmDelete()
     }
 }
