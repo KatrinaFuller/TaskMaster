@@ -14,6 +14,9 @@ export default class ValuesService {
     //TODO  Here is where we handle all of our data manipulation, 
     //given the information you need in the controller, 
     //what methods will be required to support that functionality?
+    constructor() {
+        this.getLists()
+    }
 
     get List() {
         return _state.lists.map(list => new List(list))
