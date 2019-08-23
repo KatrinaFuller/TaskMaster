@@ -11,6 +11,7 @@ let _state = {
 
 //Public
 export default class ValuesService {
+
     //TODO  Here is where we handle all of our data manipulation, 
     //given the information you need in the controller, 
     //what methods will be required to support that functionality?
@@ -19,6 +20,10 @@ export default class ValuesService {
         return _state.lists.map(list => new List(list))
     }
 
+    addList(newList) {
+        _state.lists.push(new List(newList))
+        this.saveLists()
+    }
 
 
     //NOTE You will need this code to persist your data into local storage, these methods should not require changing
