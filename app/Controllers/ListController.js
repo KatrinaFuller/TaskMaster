@@ -36,5 +36,12 @@ export default class ListController {
         _drawLists()
     }
 
+    addTask(event, listIndex) {
+        event.preventDefault()
+        let form = event.target
+        let newTask = form.task.value
+        _listService.addTask(newTask, listIndex)
+        _drawLists()
+    }
 
 }
