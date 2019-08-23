@@ -29,6 +29,10 @@ export default class ValuesService {
         this.saveLists()
     }
 
+    deleteList(index) {
+        _state.lists.splice(index, 1)
+        this.saveLists()
+    }
 
     //NOTE You will need this code to persist your data into local storage, these methods should not require changing
 
