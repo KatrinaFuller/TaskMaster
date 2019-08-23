@@ -6,4 +6,14 @@ export default class List {
         this.task = data.task || []
 
     }
+
+    getTemplate(index) {
+        let template =
+            `
+                <div class="col-4">
+                    <h1>title</h1>
+                    <p>task</p>
+                </div>
+            `
+    }
 }
