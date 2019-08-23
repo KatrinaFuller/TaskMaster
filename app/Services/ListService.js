@@ -2,7 +2,13 @@ import List from "../models/List.js";
 
 //Private
 let _state = {
-    lists: []
+    lists: [new List({
+        title: "To Do",
+        task: "get health insurance",
+        date: 082319,
+        dueDate: 090119,
+        priorityLevel: "high"
+    })]
 }
 
 
@@ -12,6 +18,9 @@ export default class ValuesService {
     //given the information you need in the controller, 
     //what methods will be required to support that functionality?
 
+    get List() {
+        return _state.lists.map(list => new List(list))
+    }
 
 
 

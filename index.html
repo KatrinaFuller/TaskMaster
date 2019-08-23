@@ -12,33 +12,15 @@
 
 <body>
     <div class="container-fluid">
-        <div class="row">
-            <div class="col">
-                <div class="form-group">
-                    <label for="title">Title of List</label>
-                    <input type="text" class="form-control" id="title" placeholder="enter title of your list" required>
-                </div>
-                <div class="form-group">
-                    <label for="task">Task</label>
-                    <input type="text" class="form-control" id="task" placeholder="enter task" required>
-                </div>
-                <div class="form-group">
-                    <label for="current-date">Current Date</label>
-                    <input type="date" class="form-control" id="current-date" placeholder="enter the current date"
-                        required>
-                </div>
-                <div class="form-group">
-                    <label for="due-date">Date completed by</label>
-                    <input type="text" class="form-control" id="due-date" placeholder="enter due date" required>
-                </div>
-                <div class="form-group">
-                    <label for="priority-level">Priority Level</label>
-                    <input type="radio" class="form-control" id="low" value="low" required>Low<br>
-                    <input type="radio" class="form-control" id="medium" value="medium" required>Medium<br>
-                    <input type="radio" class="form-control" id="high" value="high" required>High<br>
-                </div>
+        <form onsubmit="app.controllers.listController.addList(event)">
+            <div class="form-group">
+                <label for="title">Title of List</label>
+                <input type="text" class="form-control" id="title" placeholder="enter title of your list" required>
             </div>
-        </div>
+            <button class="btn btn-primary">Submit</button>
+        </form>
+
+
     </div>
 
     <script src="app/main.js" type="module"></script>
