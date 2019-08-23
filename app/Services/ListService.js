@@ -34,6 +34,11 @@ export default class ValuesService {
         this.saveLists()
     }
 
+    deleteTask(listIndex, taskIndex) {
+        _state.lists[listIndex].task.splice(taskIndex, 1)
+        this.saveLists()
+    }
+
     //NOTE You will need this code to persist your data into local storage, these methods should not require changing
 
     //NOTE call saved list everytime you change the list collection in any way
