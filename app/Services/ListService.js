@@ -33,13 +33,17 @@ export default class ValuesService {
     }
 
     deleteList(index) {
-        _state.lists.splice(index, 1)
-        this.saveLists()
+        if (confirm("Are you sure you want to delete this?")) {
+            _state.lists.splice(index, 1)
+            this.saveLists()
+        }
     }
 
     deleteTask(listIndex, taskIndex) {
-        _state.lists[listIndex].tasks.splice(taskIndex, 1)
-        this.saveLists()
+        if (confirm("Are you sure you want to delete this?")) {
+            _state.lists[listIndex].tasks.splice(taskIndex, 1)
+            this.saveLists()
+        }
     }
 
     //NOTE You will need this code to persist your data into local storage, these methods should not require changing
