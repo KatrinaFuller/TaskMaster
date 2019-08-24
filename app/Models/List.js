@@ -10,7 +10,7 @@ export default class List {
     getTemplate(index) {
         let template =
             `
-                <div class="col-sm-12 col-md-4 border">
+                <div class="col-sm-12 col-md-4 border border-dark rounded-lg shadow-sm p-4 mb-4 bg-white">
                     <h1>${this.title}</h1>
                     <ul>`
         template += this.drawTasks(index)
@@ -32,7 +32,7 @@ export default class List {
     drawTasks(listIndex) {
         let taskTemplate = ""
         this.tasks.forEach((t, taskIndex) => {
-            taskTemplate += `<li>${t}<span onclick="app.controllers.listController.deleteTask(${listIndex}, ${taskIndex})" class="little-x"> X </span></li>`
+            taskTemplate += `<input type="checkbox" value=""> ${t}<span onclick="app.controllers.listController.deleteTask(${listIndex}, ${taskIndex})" class="little-x"> X </span><br>`
         });
         return taskTemplate
     }
