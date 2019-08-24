@@ -11,7 +11,7 @@ export default class List {
         let template =
             `
                 <div class="col-sm-12 col-md-4 border border-dark rounded-lg shadow p-3 mb-5 bg-white">
-                    <h1>${this.title}</h1>
+                    <h4>${this.title}</h4>
                     <ul>`
         template += this.drawTasks(index)
         template += `   </ul>
